@@ -8,7 +8,7 @@ from aiogram.types import ReplyKeyboardMarkup
 
 # ── ВСТАВЬ ТОКЕН ЗДЕСЬ ─────────────────────────────────────────────────────────
 # Вариант 1 (рекомендуется): добавь API_TOKEN в Secrets/Environment на Replit/Render
-API_TOKEN = os.getenv("API_TOKEN", "").strip()
+API_TOKEN = os.getenv("API_TOKEN", "8294966587:AAFuLOu9Is9VQVIke5OatPzmL1LDVFeQpYw").strip()
 # Вариант 2: впиши токен вручную вместо пустой строки ниже (НЕ публикуй его нигде!)
 # API_TOKEN = "ВСТАВЬ_СВОЙ_ТОКЕН_ЗДЕСЬ"
 
