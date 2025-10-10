@@ -4,7 +4,8 @@ services:
     env: python
     plan: free
     buildCommand: |
-      apt-get update && apt-get install -y gcc
-      pip install --upgrade pip
+      apt-get update
+      apt-get install -y build-essential python3-dev
+      pip install --upgrade pip setuptools wheel
       pip install -r requirements.txt
     startCommand: python bot.py
