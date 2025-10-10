@@ -41,11 +41,28 @@ SoulMap MED is a Telegram bot that helps users discover their psychological arch
 - **2025-10-10**: Initial Replit setup
   - Fixed requirements.txt syntax error (removed extra dot from version)
   - Configured Python 3.11 environment
-  - Added API_TOKEN to secrets
+  - Removed hard-coded API token for security
+  - Added API_TOKEN to secrets (requires valid Telegram bot token)
   - Created replit.md documentation
+  - Configured workflow for console output
+  - Added .gitignore for Python project
 
 ## Usage
 The bot runs continuously and responds to Telegram messages. Users interact through Telegram app, not through a web interface.
+
+## Troubleshooting
+### Token is invalid error
+If you see "Token is invalid!" error:
+1. Go to Telegram and find @BotFather
+2. Send `/mybots` and select your bot
+3. Click "API Token" to view or regenerate your token
+4. Update the API_TOKEN in Replit Secrets with the correct token
+5. Restart the workflow
+
+### Bot not responding
+- Check that the workflow is running (green status)
+- Verify the token is correct in Replit Secrets
+- Check the console logs for error messages
 
 ## User Preferences
 None configured yet - this is a fresh import.
