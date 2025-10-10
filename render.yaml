@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: archetype-bot
+    env: python
+    plan: free
+    buildCommand: |
+      apt-get update && apt-get install -y gcc
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: python bot.py
