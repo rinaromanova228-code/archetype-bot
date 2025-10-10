@@ -37,7 +37,18 @@ SoulMap MED is a Telegram bot that helps users discover their psychological arch
 - `aiogram==2.25.1` - Telegram Bot framework
 - `pillow` - Image processing library (for potential future features)
 
+## Deployment Configuration
+- **Type**: Reserved VM (Background Worker)
+- **Why**: This bot uses polling mode (not webhooks), which requires a persistent connection to Telegram's API. Autoscale deployments are designed for HTTP servers, not polling-based bots.
+- **Run command**: `python bot.py`
+- The bot will run continuously in the background when deployed
+
 ## Recent Changes
+- **2025-10-10**: Deployment configuration fixed
+  - Changed deployment type from Autoscale to Reserved VM (Background Worker)
+  - Polling-based bots need persistent connections, which Reserved VM provides
+  - Removed conflicting workflow instances to prevent API conflicts
+  
 - **2025-10-10**: Initial Replit setup
   - Fixed requirements.txt syntax error (removed extra dot from version)
   - Configured Python 3.11 environment
